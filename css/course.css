@@ -84,6 +84,12 @@
    the desktop grid and steals the lesson column. */
 .sidebar-scrim { display: none; }
 
+/* explicit placement so no stray sibling can ever shift the columns */
+@media (min-width: 901px) {
+  .sidebar { grid-column: 1; grid-row: 1; }
+  .lesson { grid-column: 2; grid-row: 1; }
+}
+
 /* ---------- sidebar ---------- */
 
 .sidebar {
