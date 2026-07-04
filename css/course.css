@@ -79,6 +79,11 @@
   min-height: calc(100vh - 61px);
 }
 
+/* hidden everywhere by default; the mobile media query shows it (.show)
+   as the drawer backdrop. Without this base rule the unstyled div joins
+   the desktop grid and steals the lesson column. */
+.sidebar-scrim { display: none; }
+
 /* ---------- sidebar ---------- */
 
 .sidebar {
