@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course — The AI-Native PM</title>
+<meta name="description" content="The AI-Native PM course player: 8 modules, 33 lessons, progress saved automatically.">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A1A1A'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%237FFF00'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/course.css">
+</head>
+<body class="course-body">
+
+<header class="cbar">
+  <a class="nav-logo" href="index.html" title="Back to the course page">✦ <span>AI-NATIVE&nbsp;PM</span></a>
+  <div class="cbar-progress">
+    <span class="cbar-pct" id="progress-pct">0%</span>
+    <div class="cbar-track"><div class="cbar-fill" id="progress-fill"></div></div>
+  </div>
+  <button class="cbar-menu" id="sidebar-toggle" aria-label="Toggle lesson list" aria-expanded="false">☰ <span>Lessons</span></button>
+</header>
+
+<div class="course-layout">
+  <aside class="sidebar" id="sidebar" aria-label="Course navigation">
+    <nav id="sidebar-nav"><!-- rendered by js/course.js --></nav>
+  </aside>
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+  <main class="lesson" id="lesson-root" tabindex="-1"><!-- rendered by js/course.js --></main>
+</div>
+
+<script src="js/course-data.js"></script>
+<script src="js/course.js"></script>
+</body>
+</html>

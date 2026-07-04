@@ -1,0 +1,380 @@
+/* ============================================================
+   The AI-Native PM — course player styles
+   Worth Building brand: Brunson display · Perfectly Nineties
+   reading text · mono metadata. Requires tokens.css + style.css.
+   ============================================================ */
+
+.course-body { overflow-x: clip; }
+
+/* ---------- top bar ---------- */
+
+.cbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 28px;
+  background: rgba(26, 26, 26, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.cbar-progress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.cbar-pct {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--acid);
+  min-width: 42px;
+  text-align: right;
+}
+
+.cbar-track {
+  flex: 1;
+  height: 4px;
+  background: var(--line-soft);
+  border-radius: var(--wb-radius-pill);
+  overflow: hidden;
+}
+
+.cbar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--acid);
+  border-radius: var(--wb-radius-pill);
+  transition: width 0.5s ease;
+}
+
+.cbar-menu {
+  display: none;
+  border-radius: var(--wb-radius-pill);
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: var(--wb-weight-bold);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.cbar-menu:hover { color: var(--acid); background: rgba(255, 255, 255, 0.05); }
+
+/* ---------- layout ---------- */
+
+.course-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: calc(100vh - 61px);
+}
+
+/* ---------- sidebar ---------- */
+
+.sidebar {
+  border-right: 1px solid var(--line-soft);
+  padding: 28px 18px 60px;
+  position: sticky;
+  top: 61px;
+  height: calc(100vh - 61px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.snav-module { margin-bottom: 8px; }
+
+.snav-mod-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  background: none;
+  border: none;
+  border-radius: var(--wb-radius-md);
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: var(--wb-weight-bold);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.snav-mod-head:hover { background: rgba(255, 255, 255, 0.03); }
+
+.snav-mod-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--faint);
+  flex-shrink: 0;
+}
+
+.snav-mod-done {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--faint);
+  flex-shrink: 0;
+}
+.snav-module.complete .snav-mod-done { color: var(--acid); }
+
+.snav-caret {
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--faint);
+  transition: transform 0.25s;
+}
+.snav-module.open .snav-caret { transform: rotate(90deg); }
+
+.snav-lessons {
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+.snav-module.open .snav-lessons { max-height: 500px; }
+
+.snav-lesson {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px 9px 14px;
+  margin: 1px 0;
+  border-radius: var(--wb-radius-md);
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.4;
+  transition: background 0.15s, color 0.15s;
+}
+.snav-lesson:hover { background: rgba(255, 255, 255, 0.03); color: var(--ink); }
+.snav-lesson.active { background: var(--acid-soft); color: var(--ink); }
+
+.snav-check {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--faint);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: transparent;
+  transition: all 0.2s;
+}
+.snav-lesson.done .snav-check {
+  background: var(--acid);
+  border-color: var(--acid);
+  color: var(--wb-text-on-brand);
+}
+
+/* ---------- lesson pane ---------- */
+
+.lesson {
+  padding: 56px 64px 120px;
+  max-width: 800px;
+  outline: none;
+}
+
+.lesson-eyebrow {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--acid);
+  margin-bottom: 18px;
+}
+
+.lesson h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  margin-bottom: 16px;
+}
+
+.lesson-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+  margin-bottom: 42px;
+  display: flex;
+  gap: 18px;
+}
+
+.lesson-content p {
+  color: var(--wb-ink-100);
+  margin-bottom: 22px;
+  font-size: 18.5px;
+  line-height: 1.68;
+}
+
+.lesson-content strong { color: var(--ink); }
+.lesson-content em { color: var(--ink); }
+
+.lesson-content blockquote {
+  margin: 30px 0;
+  padding: 26px 30px;
+  border-left: 2px solid var(--acid);
+  background: var(--bg-raised);
+  border-radius: 0 var(--wb-radius-md) var(--wb-radius-md) 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.lesson-content blockquote cite {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+/* exercise block */
+
+.exercise {
+  margin: 44px 0;
+  border: 1px solid rgba(127, 255, 0, 0.4);
+  border-radius: var(--radius);
+  padding: 30px 32px;
+  background: linear-gradient(160deg, rgba(127, 255, 0, 0.06), transparent 55%);
+}
+
+.exercise p.exercise-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--acid);
+  margin-bottom: 12px;
+}
+
+.exercise h3 { font-size: 24px; margin-bottom: 12px; }
+.exercise p { color: var(--muted); font-size: 16.5px; line-height: 1.6; margin: 0; }
+.exercise p strong { color: var(--ink); }
+
+/* sources */
+
+.sources { margin-top: 44px; border-top: 1px solid var(--line-soft); padding-top: 26px; }
+
+.sources-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--faint);
+  margin-bottom: 14px;
+}
+
+.sources a {
+  display: block;
+  font-size: 15.5px;
+  color: var(--muted);
+  padding: 6px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--line);
+  transition: color 0.15s;
+}
+.sources a:hover { color: var(--acid); }
+
+/* footer nav */
+
+.lesson-nav {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-complete.is-done {
+  color: var(--muted);
+}
+.btn-complete.is-done:hover { color: var(--acid); }
+
+.lesson-nav .btn-ghost { margin-left: auto; }
+
+.lesson-nav-prev { order: -1; }
+
+/* completion panel */
+
+.complete-panel {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.complete-panel .big-check {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: var(--acid);
+  color: var(--wb-text-on-brand);
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--wb-shadow-glow);
+}
+
+.complete-panel h1 { font-size: clamp(40px, 6vw, 64px); margin-bottom: 16px; }
+.complete-panel h1 em { font-family: var(--rough); }
+.complete-panel p { color: var(--muted); max-width: 52ch; margin: 0 auto 30px; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 900px) {
+  .course-layout { grid-template-columns: 1fr; }
+
+  .cbar-menu { display: inline-flex; align-items: center; gap: 8px; }
+
+  .sidebar {
+    position: fixed;
+    top: 61px;
+    left: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    height: auto;
+    background: var(--bg-raised);
+    z-index: 150;
+    transform: translateX(-105%);
+    transition: transform 0.3s ease;
+    border-right: 1px solid var(--line);
+  }
+  .sidebar.open { transform: translateX(0); }
+
+  .sidebar-scrim {
+    display: none;
+    position: fixed;
+    inset: 61px 0 0 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 140;
+  }
+  .sidebar-scrim.show { display: block; }
+
+  .lesson { padding: 40px 24px 100px; }
+  .cbar { padding: 12px 18px; gap: 14px; }
+  .cbar-progress { max-width: none; }
+  .cbar-pct { min-width: 36px; }
+}

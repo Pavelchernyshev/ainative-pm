@@ -1,15 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="AI-Native PM — built for the curious." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A1A1A'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%237FFF00'/%3E%3C/svg%3E" />
-    <title>AI-Native PM</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI-Native PM — a course for product managers who build</title>
+<meta name="description" content="An 8-module, hands-on course that takes product managers from writing documents about AI to shipping prototypes, writing evals, and running agents. Built on 20+ primary sources from Lenny's ecosystem.">
+<meta property="og:title" content="The AI-Native PM">
+<meta property="og:description" content="Prototype-first. Eval-driven. Agent-powered. The hands-on course for product managers who build.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A1A1A'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%237FFF00'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">✦ <span>AI-NATIVE&nbsp;PM</span></a>
+    <div class="nav-links">
+      <a href="#why-now">Why now</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#method">Method</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-sm" href="course.html">Start the course</a>
+  </div>
+</nav>
+
+<header class="vhero" id="top">
+  <video id="hero-video" class="vhero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
+  <div class="vhero-content">
+    <p class="eyebrow reveal">A hands-on course for product managers · 8 modules · 33 lessons · self-paced</p>
+    <h1 class="reveal d1">The PM role just got<br><em>rewritten.</em></h1>
+    <p class="lede reveal d2">Learn the new one. <strong>The AI-Native PM</strong> turns how the best product leaders actually work in 2026 — prototype-first, eval-driven, agent-powered — into skills you ship this week. Every lesson ends with an artifact, not a takeaway.</p>
+    <div class="hero-ctas reveal d3">
+      <a class="btn" href="course.html">Start learning free&nbsp;→</a>
+      <a class="btn btn-ghost" href="#curriculum">See the curriculum</a>
+    </div>
+    <p class="hero-note reveal d3">Distilled from 20+ primary sources — Lenny’s Newsletter &amp; Podcast, How I AI, and the Lenny × Maven AI-Native PM track. Every claim is linked.</p>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>context engineering ✦ LLM-as-judge ✦ model maximalism ✦ vibe coding ✦ product taste ✦ research preview ✦ agent memory ✦ subagents ✦ MCP ✦ iterative deployment ✦ AI product sense ✦ context rot ✦ no vibes, just evals ✦ high agency ✦ riding the capability curve ✦ </span>
+    <span>context engineering ✦ LLM-as-judge ✦ model maximalism ✦ vibe coding ✦ product taste ✦ research preview ✦ agent memory ✦ subagents ✦ MCP ✦ iterative deployment ✦ AI product sense ✦ context rot ✦ no vibes, just evals ✦ high agency ✦ riding the capability curve ✦ </span>
+  </div>
+</div>
+
+<section class="quotes">
+  <figure class="quote-card reveal">
+    <blockquote>“Prompts may make headlines, but evals quietly decide whether your product thrives or dies.”</blockquote>
+    <figcaption>Aman Khan — <span>Lenny’s Newsletter, Apr 2025</span></figcaption>
+  </figure>
+  <figure class="quote-card reveal d1">
+    <blockquote>“Writing evals is quickly becoming a core skill for anyone building AI products — which will soon be everyone.”</blockquote>
+    <figcaption>Lenny Rachitsky — <span>Lenny’s Newsletter</span></figcaption>
+  </figure>
+  <figure class="quote-card reveal d2">
+    <blockquote>Now that code is cheap, product taste is “the scarcest PM skill.”</blockquote>
+    <figcaption>Cat Wu, Head of Product, Claude Code — <span>Lenny’s Podcast, Apr 2026</span></figcaption>
+  </figure>
+</section>
+
+<section class="section" id="why-now">
+  <p class="eyebrow reveal">01 — Why now</p>
+  <h2 class="reveal">Using AI is no longer a specialty.<br>It’s <em>the baseline.</em></h2>
+  <div class="split reveal">
+    <div class="split-text">
+      <p>Shopify put it in a company-wide memo: <strong>“using AI is now a baseline expectation.”</strong> Meta added a “Product Sense with AI” stage to its PM interviews. OpenAI runs all of its products with roughly 25 high-agency PMs. The job didn’t disappear — it compressed, and the leverage moved to the people who build.</p>
+      <p>The market followed. Lenny’s <em>State of the Product Job Market</em> (Mar 2026) found PM openings at a three-year high while demand for AI PM roles is, in his words, “hockey-sticking.” The gap isn’t headcount. It’s skills: writing evals, shipping prototypes instead of documents, and orchestrating agents.</p>
+      <p>This course closes that gap — not with theory, but with the exact working habits named again and again by the people running product at OpenAI, Anthropic, and the best AI-native teams.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">7,300+</span>
+        <span class="stat-label">open PM roles — a 3-year high</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">75%</span>
+        <span class="stat-label">above the 2023 market low</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">“Hockey-sticking”</span>
+        <span class="stat-label">demand for AI PM roles</span>
+      </div>
+      <p class="stat-src">Source: Lenny’s Newsletter, “State of the product job market in early 2026,” Mar 2026</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="outcomes">
+  <p class="eyebrow reveal">02 — Outcomes</p>
+  <h2 class="reveal">What you’ll be able to <em>do.</em></h2>
+  <div class="grid-3">
+    <div class="card reveal"><span class="card-num">A</span>
+      <h3>Ship a prototype in an afternoon</h3>
+      <p>Go from idea to working software with Claude, Cursor, v0, Lovable, or Bolt — and walk into your next review with a demo instead of a deck.</p>
+    </div>
+    <div class="card reveal d1"><span class="card-num">B</span>
+      <h3>Write an eval suite</h3>
+      <p>Golden datasets, code graders, LLM-as-judge. Catch hallucinations and regressions before your users do — no vibes, just evals.</p>
+    </div>
+    <div class="card reveal d2"><span class="card-num">C</span>
+      <h3>Delegate to agents</h3>
+      <p>Hand your recurring busywork — synthesis, triage, competitive sweeps — to agents you brief, verify, and measure. Reclaim hours weekly.</p>
+    </div>
+    <div class="card reveal"><span class="card-num">D</span>
+      <h3>Speak model-layer fluently</h3>
+      <p>Context windows, context rot, agent memory, subagents, tool calling, MCP — enough fluency to scope, judge feasibility, and read the diff.</p>
+    </div>
+    <div class="card reveal d1"><span class="card-num">E</span>
+      <h3>Ship in days, not quarters</h3>
+      <p>Run research-preview launches with guardrails and kill criteria. Set direction so precisely your team moves without you.</p>
+    </div>
+    <div class="card reveal d2"><span class="card-num">F</span>
+      <h3>Multiply your organization</h3>
+      <p>Turn enthusiasts into teachers with live demos and 30-day challenges — and measure the business value, not the buzz.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="curriculum">
+  <p class="eyebrow reveal">03 — Curriculum</p>
+  <h2 class="reveal">Eight modules.<br>Every one ends in an <em>artifact.</em></h2>
+  <div class="modules" id="module-list"><!-- rendered by js/landing.js from js/course-data.js --></div>
+</section>
+
+<section class="section" id="method">
+  <p class="eyebrow reveal">04 — Method</p>
+  <h2 class="reveal">A portfolio, <em>not a certificate.</em></h2>
+  <div class="grid-3 method-grid">
+    <div class="card reveal"><span class="card-num">1</span>
+      <h3>Learn the pattern</h3>
+      <p>Short, dense lessons — 5 to 10 minutes each — built directly on primary sources from the people doing the job at the highest level. Every quote is attributed and linked.</p>
+    </div>
+    <div class="card reveal d1"><span class="card-num">2</span>
+      <h3>Ship the exercise</h3>
+      <p>Every lesson ends with a build: a prototype, an eval suite, an agent brief, a context doc, a rollout plan. You practice on your real product, not toy examples.</p>
+    </div>
+    <div class="card reveal d2"><span class="card-num">3</span>
+      <h3>Keep the artifact</h3>
+      <p>By the final module you have a working portfolio — the exact evidence AI PM interviews and performance reviews now ask for.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="who">
+  <p class="eyebrow reveal">05 — Who it’s for</p>
+  <div class="who-grid">
+    <div class="who-col reveal">
+      <h3 class="who-yes">Built for</h3>
+      <ul>
+        <li>PMs who want to build with AI daily, not just talk about it</li>
+        <li>PMs interviewing for AI PM roles — including “product sense with AI” stages</li>
+        <li>Product leaders expected to raise their whole team’s AI baseline</li>
+        <li>Founders and designers doing the PM job with small teams</li>
+      </ul>
+    </div>
+    <div class="who-col reveal d1">
+      <h3 class="who-no">Not for</h3>
+      <ul>
+        <li>People looking for a list of prompts to copy-paste</li>
+        <li>Engineers who want ML internals and math — this is a product course</li>
+        <li>Anyone who wants theory without shipping anything</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="access">
+  <p class="eyebrow reveal">06 — Access</p>
+  <div class="pricing reveal">
+    <div class="pricing-info">
+      <h2>Founding <em>access.</em></h2>
+      <p>The full course, self-paced, with progress tracking and every source linked. Work through it in a two-week sprint at 30 minutes a day, or one ambitious weekend.</p>
+      <ul class="ticks">
+        <li>8 modules · 33 lessons · about 5 hours of core material</li>
+        <li>A shipped exercise in every lesson</li>
+        <li>Eval templates, agent briefs, and rollout playbooks</li>
+        <li>The complete, linked source library</li>
+        <li>Free updates as the models — and the job — move</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <p class="price-label">Founding cohort</p>
+      <p class="price"><span class="price-old">$249</span> $149</p>
+      <p class="price-sub">one-time · lifetime access</p>
+      <a class="btn btn-block" href="course.html">Enroll now&nbsp;→</a>
+      <a class="link-quiet" href="course.html#m1l1">or preview Module 01 free</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <p class="eyebrow reveal">07 — FAQ</p>
+  <h2 class="reveal">Questions, <em>answered.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Do I need to know how to code?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>No. The prototype-first workflow exists precisely because you don’t have to be an engineer anymore — tools like v0, Lovable, Bolt, and Claude Code turn intent into working software. You’ll build real things from lesson one, and Module 6 gives you exactly enough technical fluency to scope, judge feasibility, and read a diff — not to write production code.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Which tools does the course cover?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Claude and Claude Code, Cursor, ChatGPT, v0, Lovable, Bolt, and Replit — but every lesson teaches the durable pattern first and treats tools as interchangeable. “Tool hopping” is a named anti-pattern in the AI PM world; principles are what compound.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">I don’t work on an AI product. Is this still for me?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Yes. Half the course — prototyping, agents, technical fluency, multiplying your org — applies to any PM job, because using AI well is now a baseline expectation everywhere (Shopify literally wrote it in a memo). And the other half prepares you for the AI product work that is very likely coming to your roadmap anyway.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How long does it take?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>33 lessons at 5–10 minutes each — about 5 hours of core material, plus the exercises you ship along the way. Most people finish in two weeks at 30 minutes a day. Your progress is saved automatically, so you can dip in and out.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Where does the material come from?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Twenty-plus primary sources from Lenny’s ecosystem — the newsletter, the podcast, How I AI, and the Lenny × Maven AI-Native PM track — featuring Kevin Weil (OpenAI), Mike Krieger and Cat Wu (Anthropic), Aman Khan, Marily Nika, Tal Raviv, Claire Vo, Hilary Gridley, Peter Yang, and Sarah Guo. Every lesson links its sources so you can go deeper.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How is this different from a prompt-tips course?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Prompts are the least durable layer of the stack. This course teaches the layer that decides careers: judgment about what to build, evals that prove it works, prototypes that win the room, and agents that scale you. No vibes — just evals, artifacts, and shipped work.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+  <h2 class="reveal">Anticipate the technology.<br><em>Stop chasing it.</em></h2>
+  <p class="reveal d1">Start now. Your progress saves automatically — and the first artifact ships today.</p>
+  <a class="btn btn-lg reveal d2" href="course.html">Start the course&nbsp;→</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <p class="nav-logo">✦ <span>AI-NATIVE&nbsp;PM</span></p>
+      <p class="footer-tag">No vibes. Just evals.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">Course</p>
+      <a href="course.html">Open the course</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">Key sources</p>
+      <a href="https://www.lennysnewsletter.com/p/beyond-vibe-checks-a-pms-complete" target="_blank" rel="noopener">Beyond vibe checks — Aman Khan</a>
+      <a href="https://www.lennysnewsletter.com/p/kevin-weil-open-ai" target="_blank" rel="noopener">Kevin Weil on OpenAI PM</a>
+      <a href="https://www.lennysnewsletter.com/p/how-anthropics-product-team-moves" target="_blank" rel="noopener">Cat Wu on Anthropic’s product team</a>
+      <a href="https://maven.com/x/ai-native-pm-lenny" target="_blank" rel="noopener">Lenny × Maven AI-Native PM track</a>
+    </div>
+  </div>
+  <p class="footer-legal">An independent study companion built on public sources from Lenny’s ecosystem, with attribution throughout. Not affiliated with or endorsed by Lenny Rachitsky or Maven. · A Worth Building project.</p>
+</footer>
+
+<script src="js/course-data.js"></script>
+<script src="js/landing.js"></script>
+</body>
 </html>

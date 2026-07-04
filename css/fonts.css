@@ -1,0 +1,32 @@
+/* ============================================================
+   Worth Building — brand webfonts (local files, no CDN)
+   Brunson: bold condensed display (single cut — the wide weight
+   ranges below map every requested weight to the real face, so
+   the browser never fakes a bold).
+   Perfectly Nineties: editorial serif, regular cut; italics are
+   synthesized (acceptable for quotes/leads), bolds are not.
+   ============================================================ */
+
+@font-face {
+  font-family: "Brunson";
+  src: url("../fonts/Brunson.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brunson Rough";
+  src: url("../fonts/Brunson-Rough.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Perfectly Nineties";
+  src: url("../fonts/PerfectlyNineties-Regular.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
