@@ -18,6 +18,14 @@ All configuration lives in **`js/config.js`** — nothing else needs editing.
 
 ## ✅ Pavel's 15-minute checklist (one-time)
 
+## The Evals Sprint (Move 3 — pre-sale live at /evals.html)
+
+- **Offer:** two-week guided sprint, $199 founding, 25 seats, starts Mon Aug 4 2026. Includes: 5 evals lessons + 3 personally-reviewed milestone artifacts (48h written feedback) + templates + 2 live Q&As + **full course founding access bundled** (kills cannibalization with the $149 course tier).
+- **Decision rule (written in advance):** ≥10 paid founding seats within 21 days of announcement → the sprint runs. <10 → refund everyone in full, publish learnings, test the next module (prototyping). The page promises this openly.
+- **Pre-config state:** buy buttons run a concierge flow (mailto with prefilled subject/body) — pre-sales work TODAY, no accounts needed. Once Lemon Squeezy exists: create product #2 "The Evals Sprint" ($199, license keys ON — a sprint key also unlocks the course, intended, since course access is bundled) → paste its Buy URL into `evalsCheckoutUrl` in js/config.js.
+- **Store lock:** put your numeric store id into `lsStoreId` (LS → Settings → Stores) so only keys from *your* store unlock the course.
+- **Sprint delivery checklist (only if it runs):** template pack (golden-set sheet, judge rubrics, launch-gate checklist — build in week before start), 2 calendar invites for Q&As, a submission channel (email is fine at 25 seats).
+
 **1. Lemon Squeezy (~7 min)** — lemonsqueezy.com
    - Create store (name: Product Copilot). Complete identity/payout setup (can happen in parallel; test mode works immediately).
    - Products → New: "The AI-Native PM — Founding Access", $149 one-time.

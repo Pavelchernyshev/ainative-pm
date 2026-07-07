@@ -51,7 +51,9 @@
     })
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        if (data && data.valid) cb(true, "");
+        var storeOk = !CFG.lsStoreId ||
+          String(((data || {}).meta || {}).store_id) === String(CFG.lsStoreId);
+        if (data && data.valid && storeOk) cb(true, "");
         else cb(false, "That key didn’t validate. Check your receipt email — or write to us.");
       })
       .catch(function () {

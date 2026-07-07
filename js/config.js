@@ -10,6 +10,14 @@ window.SITE_CONFIG = {
      Looks like: https://<store>.lemonsqueezy.com/buy/<uuid> */
   checkoutUrl: "",
 
+  /* Lemon Squeezy "Buy" URL for The Evals Sprint ($199).
+     Until set, sprint buttons fall back to the reserve-by-email flow. */
+  evalsCheckoutUrl: "",
+
+  /* Your Lemon Squeezy store ID (Settings → Stores → the numeric id).
+     When set, only license keys from YOUR store unlock the course. */
+  lsStoreId: "",
+
   /* Lemon Squeezy license-key validation stays on their public API;
      no key needed here. Manual comp keys (friends, reviewers) can be
      added below — NOTE: this file is public, so treat these as

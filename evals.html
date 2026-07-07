@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Evals Sprint — ship a working eval suite in two weeks · Product Copilot</title>
+<meta name="description" content="A two-week guided sprint for product managers: build a golden dataset, calibrate an LLM judge, and ship regression gates for your real product — with every artifact personally reviewed. Founding cohort, 25 seats.">
+<meta property="og:title" content="The Evals Sprint · Product Copilot">
+<meta property="og:description" content="Ship a working eval suite for your real product in two weeks. Founding cohort — 25 seats, every artifact reviewed.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A1A1A'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%237FFF00'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/tokens.css?v=7">
+<link rel="stylesheet" href="css/fonts.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">✦ <span>AI-NATIVE&nbsp;PM</span></a>
+    <div class="nav-links">
+      <a href="#ship">What you'll ship</a>
+      <a href="#how">How it works</a>
+      <a href="#offer">Founding offer</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-sm" href="#offer">Reserve a seat</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <p class="eyebrow reveal">Product Copilot · founding sprint · 25 seats · starts Mon, Aug 4</p>
+  <h1 class="reveal d1">No vibes.<br><em>Just evals.</em></h1>
+  <p class="lede reveal d2">A two-week guided sprint for product managers: build a golden dataset, calibrate an LLM judge, and ship regression gates — <strong>for your real product</strong>, with every artifact personally reviewed.</p>
+  <div class="hero-ctas reveal d3">
+    <a class="btn" id="evals-buy-btn" href="mailto:paul.czen@gmail.com?subject=Founding%20seat%20%E2%80%94%20The%20Evals%20Sprint&body=Hi%20Pavel%20%E2%80%94%20I%20want%20one%20of%20the%2025%20founding%20seats%20for%20The%20Evals%20Sprint%20(%24199).%0A%0AMy%20product%2Fcontext%3A%20">Reserve a founding seat — $199&nbsp;→</a>
+    <a class="btn btn-ghost" href="#ship">See what you'll ship</a>
+  </div>
+  <p class="hero-note reveal d3">The market's leading evals training costs $4,000+. This is $199 — because 25 founding members are shaping it with me. Every claim on this page is sourced.</p>
+</header>
+
+<section class="quotes">
+  <figure class="quote-card reveal">
+    <blockquote>“Prompts may make headlines, but evals quietly decide whether your product thrives or dies.”</blockquote>
+    <figcaption>Aman Khan — <span>Lenny’s Newsletter, Apr 2025</span></figcaption>
+  </figure>
+  <figure class="quote-card reveal d1">
+    <blockquote>Eval quality “effectively caps the potential of AI products.”</blockquote>
+    <figcaption>Kevin Weil, CPO, OpenAI — <span>Lenny’s Podcast</span></figcaption>
+  </figure>
+  <figure class="quote-card reveal d2">
+    <blockquote>“Writing evals is quickly becoming a core skill for anyone building AI products — which will soon be everyone.”</blockquote>
+    <figcaption>Lenny Rachitsky — <span>Lenny’s Newsletter</span></figcaption>
+  </figure>
+</section>
+
+<section class="section" id="why">
+  <p class="eyebrow reveal">01 — Why this, why now</p>
+  <h2 class="reveal">The defining skill of the AI PM era.<br><em>Almost nobody has it.</em></h2>
+  <div class="split reveal">
+    <div class="split-text">
+      <p>Every AI feature you ship is a probability distribution wearing a product's clothes. Without evals, you learn what it actually does from angry users; with them, you know before launch — and you can prove improvement instead of arguing about it.</p>
+      <p>The market already priced this skill: the best-rated evals course for PMs and engineers sells for <strong>$4,000–5,000 a seat</strong>. Meta added a "Product Sense with AI" stage to PM interviews. Hiring loops and promotion cases now ask for evidence — not enthusiasm.</p>
+      <p>This sprint exists to get you that evidence: not a certificate, but <strong>a working eval suite for your own product</strong>, reviewed milestone by milestone until it's real.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">$4,000+</span>
+        <span class="stat-label">what the market charges for this skill</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$199</span>
+        <span class="stat-label">founding price — 25 seats, once</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">artifacts shipped &amp; personally reviewed</span>
+      </div>
+      <p class="stat-src">Price benchmark: leading AI-evals cohort courses on Maven, 2026. Sources linked in the lessons.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ship">
+  <p class="eyebrow reveal">02 — What you'll ship</p>
+  <h2 class="reveal">Three milestones. Three reviews.<br>One suite <em>your team can trust.</em></h2>
+  <div class="grid-3">
+    <div class="card reveal"><span class="card-num">1</span>
+      <h3>Golden dataset + graders</h3>
+      <p><strong>Days 1–4.</strong> Thirty real cases from your product — typical, edge, and failure — each with an expected outcome and a grader assigned: code check, human, or LLM-as-judge. Reviewed within 48h.</p>
+    </div>
+    <div class="card reveal d1"><span class="card-num">2</span>
+      <h3>Calibrated judge + baseline</h3>
+      <p><strong>End of week 1.</strong> Your LLM-judge rubric, calibrated against your own ratings until you trust it — then the first full baseline run: a pass rate your product has never had before. Reviewed.</p>
+    </div>
+    <div class="card reveal d2"><span class="card-num">3</span>
+      <h3>Regression gates + eval report</h3>
+      <p><strong>End of week 2.</strong> Launch thresholds your team agrees to, a before/after report on one real change, and the eval habit wired into your launch checklist. Reviewed — and yours forever.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <p class="eyebrow reveal">03 — How it works</p>
+  <h2 class="reveal">Self-paced lessons.<br><em>Guided artifacts.</em></h2>
+  <div class="grid-3 method-grid">
+    <div class="card reveal"><span class="card-num">A</span>
+      <h3>Learn</h3>
+      <p>Five dense lessons (the full Write Evals module): why evals decide your fate, the three graders, the metrics that catch real failures, building the suite, making it a habit. ~5–10 min each, sources linked.</p>
+    </div>
+    <div class="card reveal d1"><span class="card-num">B</span>
+      <h3>Ship</h3>
+      <p>Templates included for every artifact — golden-set spreadsheet, judge-rubric patterns, launch-gate checklist. You work on your real product (or the sandbox case if yours isn't AI-shaped yet).</p>
+    </div>
+    <div class="card reveal d2"><span class="card-num">C</span>
+      <h3>Get reviewed</h3>
+      <p>Written feedback from me on each of the three milestones within 48 hours, plus two live group Q&amp;A calls (recorded). Not a video library — a feedback loop.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="offer">
+  <p class="eyebrow reveal">04 — Founding offer</p>
+  <div class="pricing reveal">
+    <div class="pricing-info">
+      <h2>Founding <em>sprint.</em></h2>
+      <p>Twenty-five seats. If fewer than ten founding members join, the sprint doesn't run and every cent is refunded — that's the deal that makes a founding price honest.</p>
+      <ul class="ticks">
+        <li>The complete Write Evals module — 5 lessons, sources linked</li>
+        <li>3 milestone artifacts, each personally reviewed within 48h</li>
+        <li>Golden-set, judge-rubric &amp; launch-gate templates</li>
+        <li>2 live group Q&amp;A calls (recorded)</li>
+        <li><strong>Founding access to the full AI-Native PM course included</strong> ($149 value)</li>
+        <li>14-day money-back guarantee, no questions</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <p class="price-label">Founding cohort · Aug 4</p>
+      <p class="price"><span class="price-old">$4,000+</span> $199</p>
+      <p class="price-sub">25 seats · artifact reviews included</p>
+      <a class="btn btn-block" id="evals-buy-btn-2" href="mailto:paul.czen@gmail.com?subject=Founding%20seat%20%E2%80%94%20The%20Evals%20Sprint&body=Hi%20Pavel%20%E2%80%94%20I%20want%20one%20of%20the%2025%20founding%20seats%20for%20The%20Evals%20Sprint%20(%24199).%0A%0AMy%20product%2Fcontext%3A%20">Reserve a founding seat&nbsp;→</a>
+      <a class="link-quiet" href="course.html#m4l1">or read the first evals lesson free</a>
+    </div>
+  </div>
+  <div data-capture></div>
+</section>
+
+<section class="section" id="who">
+  <p class="eyebrow reveal">05 — Who it's for</p>
+  <div class="who-grid">
+    <div class="who-col reveal">
+      <h3 class="who-yes">Built for</h3>
+      <ul>
+        <li>PMs shipping (or about to ship) an AI feature who can't answer "how do you know it works?"</li>
+        <li>PMs interviewing for AI PM roles who need a portfolio artifact, not a certificate</li>
+        <li>Leads who want the eval habit installed on their team, starting with themselves</li>
+      </ul>
+    </div>
+    <div class="who-col reveal d1">
+      <h3 class="who-no">Not for</h3>
+      <ul>
+        <li>Engineers who want CI pipelines and eval infra at code level — this is the PM layer</li>
+        <li>Anyone who wants to watch videos without shipping anything — reviews are the product</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <p class="eyebrow reveal">06 — FAQ</p>
+  <h2 class="reveal">Questions, <em>answered.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How much time does it take?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Four to six focused hours per week, for two weeks. The lessons are short; the hours go into your artifacts — which is the point. Everything is async except two optional live Q&amp;As (recorded).</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Do I need to code?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>No. The suite starts as a structured spreadsheet — dataset, expectations, graders, results. If you or an engineer want to script it later, the structure transfers directly; the sprint doesn't require it.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">My product doesn't have an AI feature yet. Can I still join?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Yes. You'll either eval a prototype (the course's Module 3 shows you how to build one in an afternoon) or use the provided sandbox case. The skill is identical; the artifact still goes in your portfolio.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Which tools does it use?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Model-agnostic: whatever you have access to — Claude, ChatGPT, Gemini, or your company's internal models. Templates are Google-Sheets-first. No paid tooling required beyond a model subscription you likely already have.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">What exactly does "personally reviewed" mean?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>You submit each milestone; I read it properly and send written feedback — what's strong, what's fake-rigor, what to fix — within 48 hours. With 25 seats and three milestones, every submission gets real attention. That's why seats are capped.</p></div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">What's the refund policy?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div><p>Three layers: if fewer than ten founding members join, the sprint doesn't run and everyone is refunded in full. Before the start date, full refund on request, no questions. And within the first 14 days, money back if it's not what you expected.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+  <h2 class="reveal">Stop arguing about quality.<br><em>Start measuring it.</em></h2>
+  <p class="reveal d1">Twenty-five founding seats. Every artifact reviewed. August 4.</p>
+  <a class="btn btn-lg reveal d2" id="evals-buy-btn-3" href="mailto:paul.czen@gmail.com?subject=Founding%20seat%20%E2%80%94%20The%20Evals%20Sprint&body=Hi%20Pavel%20%E2%80%94%20I%20want%20one%20of%20the%2025%20founding%20seats%20for%20The%20Evals%20Sprint%20(%24199).%0A%0AMy%20product%2Fcontext%3A%20">Reserve a founding seat&nbsp;→</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <p class="nav-logo">✦ <span>AI-NATIVE&nbsp;PM</span></p>
+      <p class="footer-tag">No vibes. Just evals.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">Sprint</p>
+      <a href="#ship">What you'll ship</a>
+      <a href="#offer">Founding offer</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">More</p>
+      <a href="index.html">The AI-Native PM course</a>
+      <a href="course.html#m4l1">Read the first evals lesson free</a>
+    </div>
+  </div>
+  <p class="footer-legal">Quotes attributed to their authors; price benchmark from public course listings, 2026. Not affiliated with or endorsed by Lenny Rachitsky or Maven. · A <strong>Product Copilot</strong> course, by Worth Building.</p>
+</footer>
+
+<script src="js/config.js?v=2"></script>
+<script src="js/landing.js?v=7"></script>
+</body>
+</html>

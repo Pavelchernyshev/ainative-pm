@@ -170,6 +170,17 @@
     buy.innerHTML = "Get founding access&nbsp;→";
   }
 
+  /* evals sprint buttons: mailto fallback → real checkout once configured */
+  if (CFG.evalsCheckoutUrl) {
+    ["evals-buy-btn", "evals-buy-btn-2", "evals-buy-btn-3"].forEach(function (id) {
+      var b = document.getElementById(id);
+      if (!b) return;
+      b.href = CFG.evalsCheckoutUrl;
+      b.target = "_blank";
+      b.rel = "noopener";
+    });
+  }
+
   /* render email capture wherever <div data-capture> exists */
   if (CFG.brevoFormAction) {
     document.querySelectorAll("[data-capture]").forEach(function (el) {
