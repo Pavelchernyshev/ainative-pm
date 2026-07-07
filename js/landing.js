@@ -156,3 +156,32 @@
   );
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 })();
+
+/* ---- monetization wiring (driven by js/config.js) ---- */
+(function () {
+  var CFG = window.SITE_CONFIG || {};
+
+  /* swap the pricing button to the real checkout once configured */
+  var buy = document.getElementById("buy-btn");
+  if (buy && CFG.checkoutUrl) {
+    buy.href = CFG.checkoutUrl;
+    buy.target = "_blank";
+    buy.rel = "noopener";
+    buy.innerHTML = "Get founding access&nbsp;→";
+  }
+
+  /* render email capture wherever <div data-capture> exists */
+  if (CFG.brevoFormAction) {
+    document.querySelectorAll("[data-capture]").forEach(function (el) {
+      el.innerHTML =
+        '<div class="capture">' +
+        '<p class="capture-label">Free lessons by email</p>' +
+        "<h3>Get new modules &amp; playbooks first</h3>" +
+        '<p class="capture-sub">New lessons, eval templates, and founding-member offers. No spam, unsubscribe anytime.</p>' +
+        '<form class="capture-form" method="POST" action="' + CFG.brevoFormAction + '" target="_blank">' +
+        '<input class="capture-input" type="email" name="EMAIL" required placeholder="you@work.com" autocomplete="email">' +
+        '<button class="btn btn-sm" type="submit">Subscribe</button>' +
+        "</form></div>";
+    });
+  }
+})();

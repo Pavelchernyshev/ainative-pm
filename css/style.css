@@ -838,3 +838,147 @@ strong { font-weight: var(--wb-weight-bold); color: var(--ink); }
   .footer-top { grid-template-columns: 1fr; }
   .final-cta { padding: 100px 22px 90px; }
 }
+
+/* ---------- monetization: locked panel, key form, email capture ---------- */
+
+.locked-panel {
+  margin: 44px 0;
+  padding: 36px 34px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 80px -30px rgba(127, 255, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.locked-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, rgba(127,255,0,0.5) 0%, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0) 55%, rgba(255,255,255,0.12) 80%, rgba(127,255,0,0.5) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.locked-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--acid);
+  margin-bottom: 14px;
+}
+.locked-panel h3 { font-size: 26px; margin-bottom: 12px; }
+.locked-sub { color: var(--muted); font-size: 16px; max-width: 52ch; margin: 0 auto 26px; }
+.locked-hint {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--faint);
+  margin: 22px 0 10px;
+}
+
+.key-form {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.key-status {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--acid);
+  margin-top: 12px;
+  min-height: 1.2em;
+}
+
+/* faded teaser above the locked panel */
+.locked-panel ~ .lesson-nav { margin-top: 30px; }
+
+.capture {
+  margin: 44px auto 0;
+  padding: 32px 34px;
+  max-width: 640px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.capture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.capture-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--acid);
+  margin-bottom: 12px;
+}
+.capture h3 { font-size: 22px; margin-bottom: 10px; }
+.capture-sub { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+
+.capture-form {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.capture-input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: var(--wb-radius-pill);
+  padding: 11px 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 15px;
+  outline: none;
+}
+.capture-input::placeholder { color: var(--faint); }
+.capture-input:focus { border-color: var(--acid); }
+
+/* sidebar lock marker */
+.snav-lock {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--acid);
+  opacity: 0.75;
+}
+.snav-lesson.locked { color: var(--faint); }
+.snav-lesson.locked:hover { color: var(--muted); }
+
+section[data-capture], #access [data-capture] { max-width: var(--maxw); margin: 40px auto 0; }
+
+@media (max-width: 660px) {
+  .key-form, .capture-form { flex-direction: column; }
+  .locked-panel, .capture { padding: 26px 20px; }
+}
